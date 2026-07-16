@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexara IA Studio — Inteligencia Artificial y Creatividad</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Nexara IA Studio</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; min-height: 100vh; background: #0a0a15; color: white; line-height: 1.6; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: rgba(10,10,21,0.95); position: fixed; width: 100%; top: 0; z-index: 100; }
-        .logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; color: #00f45a; }
-        .nav-links a { margin-left: 2rem; color: white; text-decoration: none; transition: color 0.3s; }
-        .nav-links a:hover { color: #00f45a; }
-        section { padding: 6rem 5% 4rem; }
-        .hero { background: linear-gradient(135deg, #1e55b4 0%, #00f45a 100%); text-align: center; padding: 8rem 5% 6rem; margin-top: 60px; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; font-family: 'Outfit', sans-serif; }
-        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto; opacity: 0.95; }
-        .section-title { text-align: center; font-size: 2.8rem; margin-bottom: 3rem; font-family: 'Outfit', sans-serif; color: #00f45a; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .card { background: rgba(255,255,255,0.05); border-radius: 20px; padding: 2.5rem; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s, box-shadow 0.3s; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,244,90,0.3); }
-        .card-icon { font-size: 3.5rem; margin-bottom: 1.5rem; }
-        .card h3 { color: #00f45a; margin-bottom: 1rem; font-size: 1.5rem; }
-        .cta-button { background: linear-gradient(45deg, #00f45a, #1e55b4); color: #000; border: none; padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: 700; border-radius: 30px; cursor: pointer; margin-top: 1rem; display: inline-block; }
-        footer { text-align: center; padding: 2rem; background: #000; color: #666; font-size: 0.9rem; }
-        .cta-section { background: linear-gradient(135deg, #0a1a2f 0%, #1a2a4f 100%); text-align: center; padding: 5rem 5%; }
+:root{--color-bg: #0a0a0a;--color-bg-secondary: #121212;--color-text: #ffffff;--color-text-muted: #a0a0a0;--color-neon-cyan: #00f3ff;--color-neon-magenta: #bc13fe;--color-neon-coral: #ff4d4d;--color-neon-blue: #0066ff;--gradient-primary: linear-gradient(135deg, var(--color-neon-cyan), var(--color-neon-blue));--gradient-secondary: linear-gradient(135deg, var(--color-neon-magenta), var(--color-neon-coral));--font-display: "Outfit", sans-serif;--radius-sm: 8px;--radius-lg: 24px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background-color:var(--color-bg);color:var(--color-text);font-family:"Inter", system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-display);font-weight:700;line-height:1.2;color:var(--color-text)}
+a{text-decoration:none;color:inherit;transition:color .3s ease}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+section{padding:4rem 5%;background:linear-gradient(to bottom,var(--color-bg),var(--color-bg-secondary))}
+.hero{background:#000 url('/assets/hero-bg-FkSM43e_.png') center/cover no-repeat;text-align:center;padding:8rem 5% 6rem;position:relative}
+.hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);}
+.hero-content{position:relative;z-index:1;max-width:800px;margin:0 auto}
+.hero h1{font-size:3.5rem;margin-bottom:1rem;color:var(--color-neon-cyan);text-transform:uppercase}
+.hero p{font-size:1.3rem;color:var(--color-text-muted);margin-bottom:2rem}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 5%;background:rgba(10,10,18,0.95);position:fixed;width:100%;top:0;z-index:100}
+.logo{font-family:var(--font-display);font-weight:800;font-size:1.5rem;color:var(--color-neon-cyan);display:flex;align-items:center;gap:10px}
+.nav img{height:40px}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1200px;margin:0 auto}
+.card{background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);padding:2.5rem;text-align:center;border:1px solid rgba(255,255,255,0.1);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-10px);box-shadow:0 10px 30px rgba(0,243,255,0.2)}
+.card-icon{font-size:3.5rem;margin-bottom:1rem}
+.card h3{color:var(--color-neon-cyan);margin-bottom:1rem;font-size:1.5rem}
+.cta-button{display:inline-block;background:var(--gradient-primary);color:#000;border:none;padding:1rem 2.5rem;font-weight:700;border-radius:30px;transition:transform .3s}
+.cta-button:hover{transform:scale(1.05)}
+footer{text-align:center;padding:2rem;background:#000;color:#666}
     </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">Nexara IA Studio</div>
+    <nav class="nav">
+        <div class="logo">
+            <img src="/assets/logo-BjH0_Cab.png" alt="Logo">
+            Nexara IA Studio
+        </div>
         <div class="nav-links">
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
@@ -40,92 +49,79 @@
     </nav>
 
     <section class="hero" id="inicio">
-        <h1>Nexara IA Studio</h1>
-        <p>Donde la inteligencia artificial y la creatividad dan vida a tu marca…</p>
+        <div class="hero-content">
+            <h1>NEXARA IA STUDIO</h1>
+            <p>Donde la inteligencia artificial y la creatividad dan vida a tu marca…</p>
+            <button class="cta-button" onclick="document.getElementById('tarjetas-digitales').scrollIntoView({behavior:'smooth'})">
+                DESCUBRE MÁS
+            </button>
+        </div>
     </section>
 
     <section id="servicios">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <div class="services-grid">
+        <h2 style="text-align:center;font-size:2.5rem;margin-bottom:3rem;color:var(--color-neon-cyan)">Nuestros Servicios</h2>
+        <div class="cards-grid">
             <div class="card">
                 <div class="card-icon">🤖</div>
                 <h3>Agentes IA Personalizables</h3>
                 <p>Chatbots y asistentes inteligentes con conocimiento específico para tu negocio</p>
-                <button class="cta-button">Ver más</button>
             </div>
             <div class="card">
                 <div class="card-icon">📱</div>
                 <h3>Automatización Redes Sociales</h3>
                 <p>Gestión automática de publicaciones, respuestas y engagement 24/7</p>
-                <button class="cta-button">Ver más</button>
             </div>
             <div class="card">
                 <div class="card-icon">🎬</div>
                 <h3>Spots Publicitarios IA</h3>
                 <p>Videos publicitarios generados con IA en minutos</p>
-                <button class="cta-button">Ver más</button>
             </div>
             <div class="card">
                 <div class="card-icon">📊</div>
                 <h3>Tarjetas Digitales Inteligentes</h3>
                 <p>Tu catálogo en línea con analytics avanzado y QR único</p>
-                <button class="cta-button">Ver más</button>
             </div>
             <div class="card">
                 <div class="card-icon">🎨</div>
                 <h3>Branding y Logo IA</h3>
                 <p>Identidad visual generada con IA según tu branding</p>
-                <button class="cta-button">Ver más</button>
             </div>
             <div class="card">
                 <div class="card-icon">📞</div>
                 <h3>Asistentes de Llamadas IA</h3>
                 <p>Atención telefónica automática 24/7 con IA conversacional</p>
-                <button class="cta-button">Ver más</button>
             </div>
             <div class="card">
                 <div class="card-icon">💻</div>
                 <h3>Desarrollo Web IA</h3>
                 <p>Sitios web inteligentes con experiencias personalizadas</p>
-                <button class="cta-button">Ver más</button>
             </div>
         </div>
     </section>
 
-    <section style="background: linear-gradient(135deg, #0a1a2f 0%, #1a2a4f 60%, #4a1a6f 100%);" id="tarjetas-digitales">
-        <h2 class="section-title">✨ Tarjetas Digitales Inteligentes</h2>
-        <div class="services-grid">
-            <div class="card">
-                <div class="card-icon">📱</div>
-                <h3>Bio Link Único</h3>
-                <p>TODOS TUS ENLACES EN UN SOLO LUGAR - TU TARJETA DIGITAL te conecta al mundo</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">📊</div>
-                <h3>Analytics Avanzado</h3>
-                <p>Conoce quién te visita, desde dónde y qué enlaces usa</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🔄</div>
-                <h3>Actualización Ilimitada</h3>
-                <p>Modifica tu información cuando quieras sin costo ni espera</p>
-            </div>
+    <section id="tarjetas-digitales" style="background:#121212">
+        <h2 style="text-align:center;font-size:2.5rem;margin-bottom:3rem;color:var(--color-neon-cyan)">✨ Tarjetas Digitales Inteligentes</h2>
+        <div style="text-align:center;margin-bottom:2rem">
+            <img src="/assets/nexara_new-BL3Hv_W3.jpg" alt="Nexara" style="width:200px;border-radius:50%;margin:0 auto 1rem;display:block">
+            <h3 style="color:var(--color-neon-cyan)">Tu Tarjeta Digital Inteligente</h3>
+            <p style="color:#a0a0a0;max-width:600px;margin:0 auto">TODOS TUS ENLACES EN UN SOLO LUGAR - TU TARJETA DIGITAL te conecta al mundo</p>
         </div>
-        <div style="max-width: 800px; margin: 3rem auto; text-align: center; padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 20px;">
-            <h3 style="color: #ffeb3b; margin-bottom: 1rem;">Perfecto para:</h3>
-            <p>✓ Asesores profesionales</p>
-            <p>✓ Influencers y creadores</p>
-            <p>✓ Negocios locales</p>
-            <p>✓ Equipos comerciales</p>
-            <button class="cta-button" onclick="window.open('https://wa.me/573228747596', '_blank')">
-                ¡CREA LA TUYA HOY!
-            </button>
+        <div style="display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin-bottom:2rem">
+            <img src="/assets/qr_new_1-tAJCgI_8.png" alt="QR" style="width:150px;border:2px solid var(--color-neon-cyan);border-radius:10px">
+            <div style="text-align:center">
+                <h4 style="color:var(--color-neon-cyan);margin-bottom:1rem">Perfecto para:</h4>
+                <p>✓ Asesores profesionales</p>
+                <p>✓ Influencers y creadores</p>
+                <p>✓ Negocios locales</p>
+                <p>✓ Equipos comerciales</p>
+                <button class="cta-button" onclick="window.open('https://wa.me/573228747596', '_blank')" style="margin-top:1rem">¡CREA LA TUYA HOY!</button>
+            </div>
         </div>
     </section>
 
     <section id="portafolio">
-        <h2 class="section-title">Nuestro Portafolio</h2>
-        <div class="services-grid">
+        <h2 style="text-align:center;font-size:2.5rem;margin-bottom:3rem;color:var(--color-neon-cyan)">Nuestro Portafolio</h2>
+        <div class="cards-grid">
             <div class="card">
                 <div class="card-icon">🔗</div>
                 <h3>Bio Links</h3>
@@ -139,25 +135,12 @@
         </div>
     </section>
 
-    <section class="cta-section" id="contacto">
-        <h2 style="font-size: 2.2rem; color: white;">¿Listo para transformar tu marca?</h2>
-        <button class="cta-button" onclick="window.open('https://wa.me/573228747596', '_blank')">
-            Conecta tu negocio
-        </button>
-        <p style="margin-top: 1rem; color: #888;">nexaraiastudio.com • hola@nexaraiastudio.com</p>
+    <section id="contacto" style="background:#000">
+        <h2 style="text-align:center;font-size:2rem;color:var(--color-neon-cyan);margin-bottom:2rem">¿Listo para transformar tu marca?</h2>
+        <button class="cta-button" onclick="window.open('https://wa.me/573228747596', '_blank')">Contáctanos por WhatsApp</button>
+        <p style="margin-top:1rem;color:#666;text-align:center">nexaraiastudio.com • hola@nexaraiastudio.com</p>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Nexara IA Studio. Todos los derechos reservados.</p>
-    </footer>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+    <footer>&copy; 2026 Nexara IA Studio. Todos los derechos reservados.</footer>
 </body>
 </html>
