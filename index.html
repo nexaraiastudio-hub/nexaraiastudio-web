@@ -144,3 +144,18 @@ footer{text-align:center;padding:2rem;background:#000;color:#666}
     <footer>&copy; 2026 Nexara IA Studio. Todos los derechos reservados.</footer>
 </body>
 </html>
+    <script>
+// Escudo Anti-Clonación Básico
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+document.addEventListener('keydown', function(e) { 
+    if (e.key === 'F12' || e.ctrlKey && e.shiftKey && e.key === 'I' || 
+        e.ctrlKey && e.key === 'U' || e.ctrlKey && e.shiftKey && e.key === 'C') {
+        e.preventDefault(); 
+    }
+});
+document.addEventListener('selectstart', function(e) { 
+    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') { 
+        e.preventDefault(); 
+    }
+});
+</script>
